@@ -429,6 +429,12 @@ const ProjectStack3D = () => {
     isHorizontalRef.current = null;
     isDraggingRef.current = false;
     hasDraggedRef.current = false;
+
+    if (e.currentTarget instanceof Element) {
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch (err) {}
+    }
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
@@ -444,12 +450,6 @@ const ProjectStack3D = () => {
         
         if (isHorizontalRef.current) {
           isDraggingRef.current = true;
-          // Capture pointer on the interaction surface only when it's a horizontal drag
-          if (e.currentTarget instanceof Element) {
-            try {
-              e.currentTarget.setPointerCapture(e.pointerId);
-            } catch (err) {}
-          }
         }
       }
     }
@@ -491,6 +491,7 @@ const ProjectStack3D = () => {
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
+      onPointerLeave={handlePointerUp}
     >
       <div
         ref={sliderRef}
