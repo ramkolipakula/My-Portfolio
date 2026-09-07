@@ -429,12 +429,6 @@ const ProjectStack3D = () => {
     isHorizontalRef.current = null;
     isDraggingRef.current = false;
     hasDraggedRef.current = false;
-
-    if (e.currentTarget instanceof Element) {
-      try {
-        e.currentTarget.setPointerCapture(e.pointerId);
-      } catch (err) {}
-    }
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
@@ -450,6 +444,12 @@ const ProjectStack3D = () => {
         
         if (isHorizontalRef.current) {
           isDraggingRef.current = true;
+          
+          if (e.currentTarget instanceof Element) {
+            try {
+              e.currentTarget.setPointerCapture(e.pointerId);
+            } catch (err) {}
+          }
         }
       }
     }

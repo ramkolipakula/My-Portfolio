@@ -41,10 +41,10 @@ const milestones: Milestone[] = [
   {
     period: "August 2025",
     category: "Coding",
-    title: "300+ LeetCode Problems Solved",
+    title: "400+ LeetCode Problems Solved",
     organization: "LeetCode",
-    description: "Solved 300+ problems (Easy & Medium) with intentional focus on pattern recognition over brute force. Strengthened data structures knowledge across trees, graphs, dynamic programming, and sliding window techniques.",
-    highlight: "300+",
+    description: "Solved 400+ problems (Easy & Medium) with intentional focus on pattern recognition over brute force. Strengthened data structures knowledge across trees, graphs, dynamic programming, and sliding window techniques.",
+    highlight: "400+",
     link: "https://leetcode.com/u/Ram___k/",
   },
   {

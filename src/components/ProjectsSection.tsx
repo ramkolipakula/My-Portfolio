@@ -32,7 +32,7 @@ const ProjectsSection = () => {
           </div>
           <div className="flex flex-col items-start md:items-end gap-2">
             <p className="text-white/35 text-sm max-w-xs leading-relaxed md:text-right text-balance">
-              7 projects spanning AI, fullstack, algorithms, and product engineering.
+              Projects spanning AI, fullstack, algorithms, and product engineering.
             </p>
             <p className="font-mono text-[9px] tracking-[0.15em] text-white/20 uppercase">
               Rotate · Click to Expand
